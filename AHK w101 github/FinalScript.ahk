@@ -29,7 +29,7 @@ InputBox, mana, mana enter,
       random, delay, 13000, 15000
       Sleep, %delay%
       loop{
-      ;searches for spiral book to see if loading screen is finished
+;searches for spiral book to see if loading screen is finished
          imagesearch, x, y, 1740, 903, 1842, 997, *100 spiral.png
          if ErrorLevel = 2
          continue
@@ -111,13 +111,14 @@ InputBox, mana, mana enter,
             if ErrorLevel =2
             msgbox, something went wrong
             
-;searches for pass icon on screen to show user still in battle            
+;If ErrorLevel = 1, spiral image was not detected. Search for pass icon to confirm battle is still in progress            
             if(ErrorLevel =1){
                imagesearch, x, y, 512, 648, 731, 730, *150 pass.png
                if(ErrorLevel=2)
                   continue
                if(ErrorLevel=1)
                   continue
+:battle is still going on at ErrorLevel = 0 as pass was found, begin buffing next attack to finish fight
 ;locates Epic buff card
                if(ErrorLevel=0){
                   imagesearch, x, y, 785, 457, 1248, 621, *150 epic.png
@@ -179,7 +180,7 @@ InputBox, mana, mana enter,
                   continue
                }
             }
-;fight is finished, leaves dungeon
+;fight is finished, leaves dungeon and begins next boss encounter
             if(ErrorLevel =0){
                random, delay, 400, 1200
                Sleep, %delay%
