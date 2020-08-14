@@ -1,11 +1,14 @@
 # W101-Boss-Farming-Bot-AHK
-W101 Boss Farming Script written in AutoHotKey  
-
-Place all images and script in same directory when executing  
+W101 Boss Farming Script written in AutoHotKey 
 
 Created to Farm Gold for Real Market Trading  
 
-Features:  Full automation kills  
+Place all images and script in same directory when executing  
+ 
+
+Features:  
+
+Full automation kills  
 
 Combatant Anti-Cheat Code via RNG coordinate mouse/key inputs and RNG timings  
 
